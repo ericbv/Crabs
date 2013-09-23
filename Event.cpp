@@ -19,7 +19,6 @@ std::string Event::ToString() const
 {
 	std::ostringstream stream;
 	stream <<(int)value;
-
 	return stream.str();;
 }
 
