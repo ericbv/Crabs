@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Dice.cpp \
+../Event.cpp \
 ../Game.cpp \
 ../main.cpp 
 
 OBJS += \
 ./Dice.o \
+./Event.o \
 ./Game.o \
 ./main.o 
 
 CPP_DEPS += \
 ./Dice.d \
+./Event.d \
 ./Game.d \
 ./main.d 
 

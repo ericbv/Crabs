@@ -34,25 +34,36 @@ void Game::Play()
 	while (count < 6)
 	{
 		rollTwoDices( d1, d2);
-		cout << "Gegooid totaal: " << (int)(d1 + d2).getValue() << std::endl;
+		cout<<"Gegooid totaal: "<<(int)(d1 + d2).getValue()<<std::endl;
+		Event e{(d1 + d2).getValue()};
+		handleEvent(e);
 		if ((d1 + d2) == 7)
 		{
 			++count;
 		}
 		++totalcount;
 	}
-	cout << "totaal keren gegooid: " << totalcount << std::endl;
+	cout<<"totaal keren gegooid: " << totalcount <<std::endl;
 }
+
+void Game::handleEvent( Event e)
+{
+	cout <<"[Event] :"<< e.ToString() << std::endl;
+}
+
 void Game::roll( Dice& d)
 {
 	d.setValue( rand() % 6 + 1);
 }
+
+
 void Game::rollTwoDices( 	Dice& d1,
 							Dice& d2)
 {
 	roll( d1);
 	roll( d2);
 }
+
 Game::~Game()
 {
 	// TODO Auto-generated destructor stub

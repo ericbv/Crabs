@@ -1,6 +1,7 @@
 #ifndef GAME_HPP_
 #define GAME_HPP_
 #include "Dice.hpp"
+#include "Event.hpp"
 /*
  *
  * Author: eric
@@ -12,6 +13,7 @@ class Game
 		Game();
 		Game(Dice aD1,Dice aD2);
 		Game(const Game& aGame);
+		void handleEvent(Event e);
 		void Play();
 		virtual ~Game();
 	private:
